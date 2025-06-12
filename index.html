@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- project title -->
+  <title>ALTSCHOOL Calculator Project</title> 
+<!-- linking index.js to our html file -->
+    <script src="index.js" defer ></script>
+    <!-- linking the css file to our html file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- This line is to put all our code into one div tag which helps with styling and readability -->
+  <div id="calculator">
+    <!-- this is for our display space, so the numbers being computed can be displayed to the user  -->
+    <div id="display-container">
+      <input type="text" id="display" readonly /> <!-- I added "readonly" so the numbers can only be read and not manipulated-->
+    </div>
+    <!-- Now we start with our basic calculator operations, like the numbers and symbols. So we create another div tag -->
+    <div id="button-grid">
+      <button class="btn" id="btn-1">1</button>
+      <button class="btn" id="btn-2">2</button>
+      <button class="btn" id="btn-3">3</button>
+      <button class="btn operator" id="btn-multiply">×</button> 
+        <!-- A little space for readability -->
+      <button class="btn" id="btn-4">4</button>
+      <button class="btn" id="btn-5">5</button>
+      <button class="btn" id="btn-6">6</button>
+      <button class="btn operator" id="btn-divide">÷</button>
+        <!-- A little space for readability -->
+      <button class="btn" id="btn-7">7</button>
+      <button class="btn" id="btn-8">8</button>
+      <button class="btn" id="btn-9">9</button>
+      <button class="btn operator" id="btn-plus">+</button>
+        <!-- A little space for readability -->
+      <button class="btn" id="btn-dot">.</button>
+      <button class="btn" id="btn-0">0</button>
+      <button class="btn" id="btn-clear" >C</button>
+      <button class="btn operator" id="btn-minus">-</button>
+        <!-- I want this to stand alone so... -->
+      <button class="btn equals" id="btn-equals">=</button>
+    </div>
+
+    <div id="history">
+      <h3>History</h3>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+
+
+</body>
+</html>
