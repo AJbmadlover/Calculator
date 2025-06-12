@@ -46,14 +46,14 @@ function handleInput(value) {
       expression = "";
     }
   } 
-  else if (value === "C") { 
-    if (!evaluated) { //if the numbers in the display hasn't been evaluated 
+  else if (value === "C") { //Now if "C" is clicked on...
+    if (!evaluated) { //but the numbers in the display hasn't been evaluated 
         expression = expression.slice(0, -1); //then remove one number from the numbers in the display.
-        display.value = expression;
+        display.value = expression; //now expression has been updated
     }
-    if(evaluated){
-        expression=""
-        display.value=expression;
+    if(evaluated){ //but if "C" was clicked on after evaluation then...
+        expression="" //clears up everything in the display
+        display.value=expression; //expression is updated
     }
   } 
   else {
@@ -65,8 +65,8 @@ function handleInput(value) {
     display.value = expression;
   }
 }
-function addToHistory(exp, res) {
-  const li = document.createElement("li");
-  li.textContent = `${exp} = ${res}`;
+function addToHistory(exp, res) { //this function is used to update the history list
+  const li = document.createElement("li"); 
+  li.textContent = `${exp} = ${res}`; //this line updates the history line to show both the expression and the result
   historyList.appendChild(li);
 }
